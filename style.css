@@ -1,0 +1,569 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--bg-color);
+}
+.wrap {
+  overflow-x: hidden;
+}
+:root {
+  --bg-color: #141414;
+  --primary-color: #4458dc;
+  --primary-font-color: #4d5055;
+  --bg-color-linear: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+}
+
+/* Nav Section */
+
+.nav-container {
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.nav-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  transition: all 0.52s ease;
+  background-color: #f1ebeb;
+}
+.left-logo {
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.nav-things2 {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+}
+.active {
+  color: var(--primary-color);
+}
+nav ul li .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: var(--bg-color-linear);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-size: 1rem;
+  transition: all 0.6s ease;
+  position: relative;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 550;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0px;
+  height: 3px;
+  background: var(--bg-color-linear);
+  transition: all 0.5s ease-in-out;
+}
+nav ul li a:hover::after {
+  color: var(--primary-color);
+  width: 100%;
+}
+.right {
+  padding: 7px 32px;
+  background: var(--bg-color-linear);
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}
+.right:hover {
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+
+.hero-section,
+.services,
+.projects {
+  margin: 0px 90px 70px 70px;
+  padding: 23px 16px 0px 33px;
+}
+
+.containerx {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  justify-content: center;
+  margin: 57px 0 69px 0;
+  position: relative;
+  top: 0;
+  left: 5%;
+}
+.content {
+  width: 50%;
+}
+.containerx img {
+  width: 43%;
+}
+.hero-h {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+.sub-h {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  margin-bottom: 33px;
+}
+.hero-p {
+  font-size: 1.1rem;
+  line-height: 28px;
+  margin-bottom: 50px;
+  color: #4d5055;
+}
+.btn {
+  position: relative;
+  background: transparent;
+  outline: none;
+  padding: 11px 26px;
+  color: var(--bg-color-linear);
+  border: 1px solid #4458dc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Be Vietnam Pro", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+.buttons {
+  display: flex;
+  gap: 3rem;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+}
+.btn:hover::after {
+  width: 100%;
+}
+.btn:hover {
+  color: #ffff;
+  border: none;
+}
+
+/* About - section */
+
+.about-section,
+.work,
+.cont {
+  margin: 0 90px 70px 70px;
+  padding: 23px 16px 0px 33px;
+}
+.about-container,
+.work-container {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.about-container img {
+  width: 43%;
+}
+.about-content {
+  width: 550px;
+  margin: 0 auto;
+}
+.hr-rule {
+  width: 116px;
+  border: 1.5px solid var(--primary-color);
+  margin-bottom: 25px;
+}
+.prmary-heading,
+.pr-1 {
+  font-size: 2.6rem;
+  position: relative;
+  outline: none;
+  font-family: "Signika", sans-serif;
+}
+.prmary-heading::after {
+  content: "";
+  position: absolute;
+  top: 86px;
+  left: 45px;
+  background: var(--bg-color-linear);
+  width: 30px;
+  height: 8px;
+}
+.abt-p1,
+.abt-p2 {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  color: var(--primary-font-color);
+  line-height: 28px;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+.hidden1 {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Services Sectio */
+
+.ser-head {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.h-primary {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+}
+.ser-head p {
+  font-size: 1.1rem;
+  color: #4d5055;
+  line-height: 26px;
+  margin: 21px auto;
+  width: 850px;
+}
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 7%;
+}
+.card-1 {
+  background: #ffff;
+  text-align: center;
+  max-width: 20%;
+  padding: 30px 20px;
+  transition: all 0.3s ease-in-out;
+}
+.c1 {
+  margin-bottom: 33px;
+}
+.card-1:hover {
+  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  scale: 1.05;
+}
+.card-h {
+  margin-bottom: 23px;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.card-p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #4d5055;
+}
+.card-1:nth-child(1) {
+  transition-delay: 300ms;
+}
+.card-1:nth-child(2) {
+  transition-delay: 500ms;
+}
+.card-1:nth-child(3) {
+  transition-delay: 700ms;
+}
+
+/* Project-Section */
+
+.projects p {
+  font-size: 1.1rem;
+  color: rgb(77, 80, 85);
+  line-height: 26px;
+  margin: 40px auto;
+  text-align: center;
+  width: 850px;
+}
+#broject-bg {
+  background: url(images/project.webp) center center / cover no-repeat;
+}
+.project-card {
+  width: 100%;
+  height: 575px;
+  position: relative;
+  box-shadow: 0px 0px 22px #1f1f1f;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+}
+.project-card:hover::before {
+  width: 100%;
+}
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(1);
+  z-index: 0;
+}
+.project-content {
+  position: relative;
+  top: 20rem;
+  left: 16rem;
+  color: white;
+  z-index: -1;
+  text-align: center;
+}
+.project-content {
+  position: absolute;
+  z-index: 4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.project-title {
+  top: 40%;
+  left: 52%;
+}
+.project-card:hover .project-content {
+  transform: scale(1.2);
+}
+
+/* Work Section */
+
+.work-h {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+.work-h::after {
+  content: "";
+  position: absolute;
+  top: 86px;
+  left: 48.5%;
+  background: var(--bg-color-linear);
+  width: 30px;
+  height: 8px;
+}
+.hr-rule1 {
+  width: 116px;
+  border: 1.5px solid var(--primary-color);
+  margin-bottom: 33px;
+  margin: 0 auto;
+}
+.w-1,
+.w-2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.work-content {
+  max-width: 500px;
+}
+.tools {
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+  width: 21%;
+}
+.work-container img {
+  width: 44%;
+}
+
+/* Update - sectio */
+
+.update-container {
+  background: url(images/subscribe-bg.webp) center center/cover no-repeat;
+  text-align: center;
+  padding: 200px 0;
+  color: #fff;
+}
+.update-container h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+.update-container p {
+  font-size: 1.2rem;
+  margin-bottom: 51px;
+}
+.update-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 64px;
+}
+.update-container input {
+  min-width: 380px;
+  line-height: 48px;
+  padding: 0 25px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  font-weight: 400;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+::-webkit-input-placeholder {
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+.sub-btn {
+  width: 180px;
+  line-height: 48px;
+  font-weight: 450;
+  color: #000;
+  background: #fff;
+  outline: none;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  font-family: "Alegreya Sans SC", sans-serif;
+  cursor: pointer;
+}
+
+/* Contact Section */
+
+.contactx {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+.contactx img {
+  width: 20%;
+}
+.con-h {
+  color: #fff;
+  font-size: 1.9rem;
+  margin-bottom: 19px;
+  font-family: "Marmelad", sans-serif;
+}
+.contact-content {
+  width: 240px;
+}
+.contactx p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 26px;
+  font-weight: 200;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 17px;
+}
+.link1,
+.link2,
+.link3 {
+  transition: all 0.3s ease-in-out;
+}
+.link1:hover,
+.link2:hover,
+.link3:hover {
+  transform: translateY(-5px);
+}
+.con-letter input {
+  min-width: 100px;
+  line-height: 48px;
+  padding: 0 25px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  font-weight: 400;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+}
+.contact-section {
+  background: rgba(0, 0, 0, 0.9) url(images/con1-bg.jpg) center center/cover
+    no-repeat;
+  opacity: 0.9;
+  background-blend-mode: darken;
+}
+.contactx:nth-child(2) {
+  transition-delay: 400ms;
+}
+.contactx:nth-child(3) {
+  transition-delay: 600ms;
+}
+/* Footer - Section */
+.footer-section {
+  width: 83%;
+  margin: 0 auto;
+}
+.footer-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 17px;
+}
